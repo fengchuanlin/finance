@@ -49,56 +49,37 @@
 							<span>最近使用</span>
 						</div>
 						<div class="wealth_buttom">
-							<van-swipe :loop="false" :width="250" :height="160" >
-							  <van-swipe-item>
-								  <div class="rebang tongYi">
-									  <div class="helptou">
-										<div class="zhox_neiro">
-											<div class="neir_top">
-												<span>帮你投</span>
-												›
-											</div>
-											<div class="zhongxin">
-												<div class="left">
-													<span>人人可享的顶级投顾服务来了</span><br>
-													省心理财交给我
-												</div>
-												<div class="right">
-													
-												</div>
-											</div>
-											<div class="peipe_but">
-												匹配专属策略
-											</div>
-										</div>
-									  </div>
-								  </div>
-							  </van-swipe-item>
-							  <van-swipe-item>
-								  <div class="bangNiTou tongYi">
-									  
-								  </div>
-							  </van-swipe-item>
-							  <van-swipe-item>
-								  <div class="licai tongYi">
-									  
-								  </div>
-							  </van-swipe-item>
-							  <van-swipe-item>
-								  <div class="guangChang tongYi">
-									  
-								  </div>
-							  </van-swipe-item>
-							  <van-swipe-item>
-								  <div class="duanShip tongYi">
-									  
-								  </div>
-							  </van-swipe-item>
-							  <van-swipe-item>
-								  <div class="tanSuo tongYi">
-									  
-								  </div>
-							  </van-swipe-item>
+							<van-swipe :loop="false" :width="250" :height="160">
+								<van-swipe-item>
+									<div class="rebang tongYi">
+										<rebang></rebang>
+									</div>
+								</van-swipe-item>
+								<van-swipe-item>
+									<div class="bangNiTou tongYi">
+										<rebang></rebang>
+									</div>
+								</van-swipe-item>
+								<van-swipe-item>
+									<div class="licai tongYi">
+										<rebang></rebang>
+									</div>
+								</van-swipe-item>
+								<van-swipe-item>
+									<div class="guangChang tongYi">
+										<rebang></rebang>
+									</div>
+								</van-swipe-item>
+								<van-swipe-item>
+									<div class="duanShip tongYi">
+										<rebang></rebang>
+									</div>
+								</van-swipe-item>
+								<!-- <van-swipe-item>
+									<div class="tanSuo tongYi">
+
+									</div>
+								</van-swipe-item> -->
 							</van-swipe>
 						</div>
 					</div>
@@ -111,6 +92,7 @@
 	import Classify from '../components/classify.vue'
 	import Translate from '../components/translate.vue'
 	import Market from '../components/market.vue'
+	import Rebang from '../components/rebang.vue'
 	export default {
 		data() {
 			return {
@@ -118,24 +100,27 @@
 				value: 4
 			}
 		},
-		components:{
+		components: {
 			Classify,
 			Translate,
-			Market
+			Market,
+			Rebang
 		}
 	}
 </script>
 <style lang="less" scoped>
 	@color: #50A49B;
 	@blue: #5DA7F8;
+
 	.custom-indicator {
-	    position: absolute;
-	    right: 5px;
-	    bottom: 5px;
-	    padding: 2px 5px;
-	    font-size: 12px;
-	    background: rgba(0, 0, 0, 0.1);
-	  }
+		position: absolute;
+		right: 5px;
+		bottom: 5px;
+		padding: 2px 5px;
+		font-size: 12px;
+		background: rgba(0, 0, 0, 0.1);
+	}
+
 	.about {
 		width: 100%;
 		height: 900px;
@@ -153,6 +138,7 @@
 		.postconter {
 			width: 100%;
 		}
+
 		// 内容
 		.conter {
 			display: flex;
@@ -162,10 +148,12 @@
 			height: 100%;
 			margin-top: -15%;
 			margin-bottom: 23%;
+
 			.zhong_con {
 				width: 345px;
 				height: 500px;
 				border-radius: 10px 10px 0px 0px;
+
 				// 股市休盘
 				.market {
 					width: 100%;
@@ -181,6 +169,7 @@
 						overflow: hidden;
 						background-color: #fff;
 					}
+
 					.market_bottom {
 						height: 50%;
 						display: flex;
@@ -189,6 +178,7 @@
 						font-size: 13px;
 						color: @blue;
 						background-color: #F9F9F9;
+
 						div {
 							width: 35px;
 							height: 20px;
@@ -204,13 +194,14 @@
 				.Rotation {
 					width: 100%;
 				}
+
 				// 财富直通车
-				.Throughtrain{
+				.Throughtrain {
 					width: 100%;
 					height: 200px;
 					margin-top: 5px;
-					background-color: darkgrey;
-					.wealth_top{
+					background-color: #fff;
+					.wealth_top {
 						width: 100%;
 						height: 35px;
 						font-size: 14px;
@@ -220,106 +211,55 @@
 						align-items: center;
 						color: #B0B0B0;
 						background-color: #fff;
-						.wealth_tetle{
+
+						.wealth_tetle {
 							color: #000;
 							font-weight: bold;
 							font-size: 17px;
 						}
 					}
-					.wealth_buttom{
+
+					.wealth_buttom {
 						width: 100%;
 						height: 100%;
-						.tongYi{
+
+						.tongYi {
 							width: 100%;
 							height: 100%;
 						}
+
 						// 24小时热榜
-						.rebang{
-							.helptou{
-								width: 240px;
-								height: 80%;
-								display: flex;
-								justify-content: center;
-								align-items: center;
-								border-radius: 10px;
-								background-color: cornflowerblue;
-								.zhox_neiro{
-									width: 90%;
-									height: 90%;
-									display: flex;
-									flex-direction: column;
-									.neir_top{
-										width: 100%;
-										height: 20px;
-										display: flex;
-										justify-content: space-between;
-										align-items: center;
-										font-size: 19px;
-										color: #eee;
-										span{
-											font-size: 10px;
-										}
-									}
-									.zhongxin{
-										width: 100%;
-										height: 60px;
-										display: flex;
-										.left{
-											width: 60%;
-											height: 100%;
-											text-align: left;
-											font-family: "黑体";
-											font-size: 5px;
-											color: #eee;
-											line-height: 20px;
-											span{
-												font-size: 13px;
-												color: #000;
-											}
-										}.right{
-											width: 40%;
-											height: 100%;
-											background-color: darkcyan;
-										}
-									}
-									.peipe_but{
-										width: 100px;
-										height: 23px;
-										margin-top: 10px;
-										display: flex;
-										justify-content: center;
-										align-items: center;
-										font-family: "黑体";
-										font-size: 10px;
-										color: #fff;
-										border-radius: 50px;
-										background-color: royalblue;
-									}
-								}
-							}
+						.rebang {
+							width: 100%;
+							height: 100%;
 						}
+
 						// 帮你投
-						.bangNiTou{
-							background-color: cornflowerblue;
+						.bangNiTou {
+							// background-color: cornflowerblue;
 						}
+
 						// 理财
-						.licai{
-							background-color: #fff;
+						.licai {
+							// background-color: #fff;
 						}
+
 						// 广场
-						.guangChang{
-							background-color: cornsilk;
+						.guangChang {
+							// background-color: cornsilk;
 						}
+
 						// 短视频
-						.duanShip{
-							background-color: darkgreen;
-						}
-						// 即刻探索
-						.tanSuo{
-							background-color: greenyellow;
-						}
+						// .duanShip {
+						// 	background-color: darkgreen;
+						// }
+
+						// // 即刻探索
+						// .tanSuo {
+						// 	background-color: greenyellow;
+						// }
 					}
-					
+
 				}
 			}
 		}
