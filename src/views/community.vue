@@ -41,7 +41,12 @@
 					<van-tab title="讨论区">
 						<comment></comment>
 					</van-tab>
-					<van-tab title="关注">内容</van-tab>
+					<van-tab title="关注">
+						<div class="follow">
+							<span>你还没有关注的人</span>
+							<span>赶紧去社区找找牛人吧！</span>
+						</div>
+					</van-tab>
 				</van-tabs>
 			</div>
 		</div>
@@ -55,7 +60,7 @@
 		data() {
 			return {
 				value: '',
-				active: 1
+				active: 2
 			}
 		},
 		components: {
@@ -99,7 +104,17 @@
 			.subproject {
 				width: 375px;
 				margin-bottom: 18%;
-
+				.follow{
+					width: 375px;
+					height: 200px;
+					font-size: 19px;
+					font-family: "黑体";
+					display: flex;
+					flex-direction: column;
+					line-height: 30px;
+					color: #A5A5A5;
+					border-top: #eee 2px solid;
+				}
 			}
 		}
 	}

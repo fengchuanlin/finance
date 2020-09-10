@@ -8,7 +8,9 @@ import About from '../views/About.vue'
 import Community from '../views/community.vue'
 import Optional from '../views/optional.vue'
 import Property from '../views/property.vue'
-
+// 子路由路径
+import Zixuanfund from '../views/optional/zixuanfund.vue'
+import Shares from '../views/optional/shares.vue'
 Vue.use(VueRouter)
 
   const routes = [
@@ -35,7 +37,19 @@ Vue.use(VueRouter)
   {
     path: '/optional',
     name: 'Optional',
-    component: Optional
+    component: Optional,
+	children:[
+		{
+			path:'/optional/zixuanfund',
+			name:'Zixuanfund',
+			component:Zixuanfund
+		},
+		{
+			path:'/optional/shares',
+			name:'Shares',
+			component:Shares
+		}
+	]
   },
   {
     path: '/property',
