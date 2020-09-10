@@ -133,6 +133,8 @@ export default {
 			.hotspot {
 				width: 375px;
 				height: 100%;
+				border-top: #eee 2px solid;
+				padding-top: 10px;
 				display: flex;
 				flex-direction: column;
 				align-items: center;
