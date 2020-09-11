@@ -60,7 +60,7 @@
 		data() {
 			return {
 				value: '',
-				active: 2
+				active: 0
 			}
 		},
 		components: {

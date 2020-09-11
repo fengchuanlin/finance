@@ -4,7 +4,14 @@
 			<div class="hotspot_top">
 				<div class="left">
 					<!-- 存放头像  portrait-->
-					<div class="portrait"></div>
+					<div class="portrait">
+						<van-image
+						  width="0.8rem"
+						  height="0.8rem"
+						  fit="cover"
+						  src="https://img.yzcdn.cn/vant/cat.jpeg"
+						/>
+					</div>
 					<span>风雨顺德人</span>
 				</div>
 				<div class="right">
@@ -48,7 +55,14 @@
 				<div class="hotspot_top">
 					<div class="left">
 						<!-- 存放头像  portrait-->
-						<div class="portrait"></div>
+						<div class="portrait">
+							<van-image
+							  width="0.8rem"
+							  height="0.8rem"
+							  fit="cover"
+							  src="https://img.yzcdn.cn/vant/cat.jpeg"
+							/>
+						</div>
 						<span>罗小胖爱理财</span>
 					</div>
 					<div class="right">
@@ -93,7 +107,14 @@
 				<div class="hotspot_top">
 					<div class="left">
 						<!-- 存放头像  portrait-->
-						<div class="portrait"></div>
+						<div class="portrait">
+							<van-image
+							  width="0.8rem"
+							  height="0.8rem"
+							  fit="cover"
+							  src="https://img.yzcdn.cn/vant/cat.jpeg"
+							/>
+						</div>
 						<span>风雨顺德人</span>
 					</div>
 					<div class="right">
@@ -172,6 +193,10 @@
 					.portrait {
 						width: 25px;
 						height: 25px;
+						display: flex;
+						overflow: hidden;
+						justify-content: center;
+						align-items: center;
 						background-color: darkgray;
 					}
 
@@ -224,7 +249,7 @@
 						-webkit-box-orient: vertical;
 						-webkit-line-clamp: 3;
 						overflow: hidden;
-						line-height: 23px;
+						line-height: 19px;
 
 						span {
 							font-size: 15px;
