@@ -7,7 +7,7 @@
 					<img :src="props.active ? icon.active : icon.inactive" />
 				</template>
 			</van-tabbar-item>
-			<van-tabbar-item replace to="/optional">
+			<van-tabbar-item replace to="/optional" exact>
 				<span>自选</span>
 				<template #icon="props">
 					<img :src="props.active ? icon2.active : icon2.inactive" />

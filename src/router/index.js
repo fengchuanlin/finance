@@ -38,6 +38,7 @@ Vue.use(VueRouter)
     path: '/optional',
     name: 'Optional',
     component: Optional,
+	redirect:'/optional/zixuanfund',
 	children:[
 		{
 			path:'/optional/zixuanfund',
