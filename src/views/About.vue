@@ -57,7 +57,7 @@
 								</van-swipe-item>
 								<van-swipe-item>
 									<div class="bangNiTou tongYi">
-										<rebang></rebang>
+										<wenjianlicai></wenjianlicai>
 									</div>
 								</van-swipe-item>
 								<van-swipe-item>
@@ -93,6 +93,7 @@
 	import Translate from '../components/translate.vue'
 	import Market from '../components/market.vue'
 	import Rebang from '../components/rebang.vue'
+	import Wenjianlicai from '../components/wenjianlicai.vue'
 	export default {
 		data() {
 			return {
@@ -104,7 +105,8 @@
 			Classify,
 			Translate,
 			Market,
-			Rebang
+			Rebang,
+			Wenjianlicai
 		}
 	}
 </script>
