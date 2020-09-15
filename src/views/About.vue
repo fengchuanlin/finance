@@ -1,6 +1,10 @@
 <template>
 	<div class="about">
-		<div class="heade"></div>
+		<div class="heade">
+			<div class="sousuo">
+				
+			</div>
+		</div>
 		<div class="postconter">
 			<div class="conter">
 				<div class="zhong_con">
@@ -110,6 +114,24 @@
 		}
 	}
 </script>
+<style lang="less">
+	.about{
+		.Rotation{
+			.van-tab{
+				color: #000;
+			}
+			.van-tab--active {
+			    color: #1919e5;
+				font-family: "微软雅黑";
+			    font-weight: 500;
+				font-size: 17px;
+			}
+			.van-tabs__line{
+				background-color: #3b6cf6;
+			}
+		}
+	}
+</style>
 <style lang="less" scoped>
 	@color: #50A49B;
 	@blue: #5DA7F8;
@@ -135,6 +157,11 @@
 			width: 375px;
 			height: 150px;
 			background-color: #427af4;
+			.sousuo{
+				width: 100%;
+				height: 50px;
+				background-color: #428af6;
+			}
 		}
 
 		.postconter {
